@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -lt 2]; then
-	echo "Breach Search"
+	echo "Breach Search by Luke Wood"
 	echo ""
 	echo "Usage: ./breach-search.sh <email or domain to search> <file to output> [data location]"
 else
@@ -16,7 +16,7 @@ else
 	totalFile=$(find "$breachDataLocation" -type f -not -path '/\.*' | wc -1)
 	fileCount=0
 
-	#Stole from github
+	#Stole from stack overflow
 	function ProgressBar(){
 		let _progress=$(((fileCount * 100 / totalFiles * 100) / 100))
 		let _done=$(((_progress * 4) / 10))
